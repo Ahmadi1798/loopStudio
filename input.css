@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+h5 {
+@apply absolute bottom-4 w-52 duration-200 px-6 md:px-10 md:bottom-8 group-hover:scale-110 group-hover:text-black;
+}
+}
+
+@layer components {
+.btn{
+@apply px-10 py-2 tracking-widest uppercase font-bold font-alata border-2 border-black hover:bg-black hover:text-white rounded-sm;  
+}
+}
+.item-container {
+@apply flex flex-col justify-between space-y-6 w-full text-white text-2xl uppercase md:flex-row md:space-y-0 md:space-x-8;
+}
+.item {
+@apply relative overflow-hidden md:w-1/4 rounded-sm;
+}
+.item-gradient {
+@apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-50;
+}
+
+#hero {
+  background-image: url('../images/desktop/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url('../images/mobile/image-hero.jpg');
+    background-position: center;
+  }
+}
+/* Hamberger Menu */
+.hamburger {
+cursor: pointer;
+width: 24px;
+height: 24px;
+transition: all 0.25s;
+position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+ position: absolute;
+ width: 24px;
+ height: 2px;
+ top: 0;
+ left: 0;
+ background: #fff;
+ transform: rotate(0);
+ transition: all 0.5s;
+}
+.hamburger-middle{
+transform: translatey(7px);
+}
+.hamburger-top {
+transform: translatey(14px);
+}
+
+  
